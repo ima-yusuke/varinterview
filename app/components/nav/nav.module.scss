@@ -1,0 +1,29 @@
+
+
+.nav{
+    background-color:rgb(71,79,90);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%;
+    }
+
+    li{
+        display: flex;
+        text-decoration: none;
+        
+        .link{
+            color:rgb(190,198,206);
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+    }
+}
+
