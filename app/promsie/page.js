@@ -3,7 +3,8 @@ import Image from "next/image";
 import bathPic from "../../public/bath.jpg";
 function PromisePage() {
   return (
-    <>
+    <div className={styles.div}>
+      <div>
       <h1>同期処理と非同期処理の違いは？</h1>
 
       {/* 同期処理 */}
@@ -57,7 +58,8 @@ function PromisePage() {
       </section>
 
       <Image src={bathPic} alt="bathPicture" className={styles.img}/>
-    </>
+      </div>
+    </div>
   );
 }
 export default PromisePage;

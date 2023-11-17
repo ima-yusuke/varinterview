@@ -6,7 +6,8 @@ import styles from "./session.module.scss";
 
 function SessionCookiePage() {
   return (
-    <>
+    <div className={styles.div}>
+      <div>
       <h1>SessionとCookieの違いは?</h1>
 
       {/* Sessionとは */}
@@ -88,7 +89,8 @@ function SessionCookiePage() {
         ※ブラウザ側で Session ID を保存する場所が Cookie となり、サーバ側で Session ID を保持する場所が Session になる
         </span></p>
       </section>
-    </>
+      </div>
+    </div>
   );
 }
 export default SessionCookiePage;

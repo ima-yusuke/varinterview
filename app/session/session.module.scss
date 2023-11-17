@@ -1,14 +1,33 @@
-.reason{
-    aside{
-        display: flex;
-        column-gap: 15vh;
-    }
-    .img{
-        width: 40vh;
-        height: 30vh;
-    }
+.reason {
+  aside {
+    display: flex;
+    column-gap: 15vh;
+  }
+  .img {
+    width: 40vh;
+    height: 30vh;
+  }
 
-    span{
-        color: red;
-    }
+  span {
+    color: red;
+  }
+}
+
+.div {
+  background-color: rgb(247, 247, 247);
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 5%;
+
+  div {
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 5%;
+    background-color: white;
+  }
+
+  h1{
+    text-align: center;
+    padding-bottom: 3%;
+  }
 }

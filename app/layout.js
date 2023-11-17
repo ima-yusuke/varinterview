@@ -4,11 +4,13 @@ export const metadata = {
 };
 
 import Nav from "./components/nav/nav";
+import HeadComponent from "./components/nav/head-component/page";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <HeadComponent></HeadComponent>
         <Nav></Nav>
         {children}
       </body>

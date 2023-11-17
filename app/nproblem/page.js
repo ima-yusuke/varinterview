@@ -1,6 +1,9 @@
+import styles from "./nproblem.module.scss";
+
 function nProblemPage() {
   return (
-    <>
+    <div className={styles.div}>
+      <div>
       <h1>N + 1問題とは?</h1>
 
       {/* N+１問題とは */}
@@ -22,7 +25,8 @@ function nProblemPage() {
         <h2>[解決策]</h2>
         <p>一般的には1の手順でテーブルをjoin(複数テーブルの結合を行いたいときに使用する命令)して、一括で情報を取得すると速度が向上する</p>
       </section>
-    </>
+      </div>
+    </div>
   );
 }
 export default nProblemPage;
