@@ -8,12 +8,12 @@ function Nav() {
         <ul>
           <li>
             <Link href="../../promsie" className={styles.link}>
-              同期処理と非同期処理の違い
+              同期処理と非同期処理
             </Link>
           </li>
           <li>
             <Link href="../../session" className={styles.link}>
-              CookieとSessionの違い
+              CookieとSession
             </Link>
           </li>
           <li>
@@ -23,22 +23,22 @@ function Nav() {
           </li>
           <li>
             <Link href="../../app-router" className={styles.link}>
-              app routerの特色
+              app router
             </Link>
           </li>
           <li>
             <Link href="../../ssg-ssr" className={styles.link}>
-              SSG・SSRとは
+              SSG・SSR
             </Link>
           </li>
           <li>
             <Link href="../../jwt" className={styles.link}>
-              JWTとは
+              JWT
             </Link>
           </li>
           <li>
             <Link href="../../session-localstroage" className={styles.link}>
-              session storage・local storage・Cookieの違い
+              session storage・local storage・Cookie
             </Link>
           </li>
         </ul>
@@ -48,7 +48,7 @@ function Nav() {
         <ul>
           <li>
             <Link href="../../api" className={styles.link}>
-              apiとは
+              api
             </Link>
           </li>
           <li>
@@ -58,17 +58,27 @@ function Nav() {
           </li>
           <li>
             <Link href="../../build-deploy" className={styles.link}>
-            Compile・Build・Deployの違い
+            Compile・Build・Deploy
             </Link>
           </li>
           <li>
             <Link href="../../about-webpack" className={styles.link}>
-             Webpackとは
+             Webpack
+            </Link>
+          </li>
+          <li>
+            <Link href="../../agile-waterfall" className={styles.link}>
+             アジャイル・ウォーターフォール開発
+            </Link>
+          </li>
+          <li>
+            <Link href="../../get-post" className={styles.link}>
+             Get・Post
             </Link>
           </li>
           <li>
             <a href="https://spice-factory.co.jp/web/about-atmicdesign/" target="blank" className={styles.link}>
-            アトミックデザインとは
+            アトミックデザイン
             </a>
           </li>
         </ul>
