@@ -4,7 +4,8 @@ export const metadata = {
 };
 
 import Nav from "./components/nav/nav";
-import HeadComponent from "./components/nav/head-component/page";
+import HeadComponent from "./components/head-component/page";
+import FrameComponent from "./components/frame-component/frame-component";
 
 export default function RootLayout({ children }) {
   return (
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <HeadComponent></HeadComponent>
         <Nav></Nav>
-        {children}
+        <FrameComponent props={children}></FrameComponent>
       </body>
     </html>
   );

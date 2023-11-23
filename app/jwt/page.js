@@ -1,14 +1,16 @@
+import H2TitleComponent from "../components/title-component/h2title-component";
+import H5TitleComponent from "../components/title-component/h5title-component";
 import styles from "./jwt.module.scss";
 
 function Jwt() {
   return (
-    <div className={styles.div}>
-      <div>
-        <h1>JWTとは</h1>
+    <>
+      <h1>JWTとは</h1>
 
+      <section>
         {/* JWTとは */}
-        <section>
-          <h2>【JWT(ジョット)とは】</h2>
+        <article>
+          <H2TitleComponent h2Title="JWT(ジョット)とは"></H2TitleComponent>
           <ul>
             <li>
               JSON Web Tokenの略で<b>ユーザー認証</b>に使える
@@ -45,11 +47,12 @@ function Jwt() {
               『署名』セクションは JWT の正当性を保証するための署名セクション
             </li>
           </ul>
-        </section>
+        </article>
 
         {/* ペイロードについて */}
-        <section>
-          <h2>【ペイロードについて】</h2>
+        <article>
+          <H2TitleComponent h2Title="ペイロードについて"></H2TitleComponent>
+
           <table border="1">
             <thead>
               <tr>
@@ -96,35 +99,55 @@ function Jwt() {
               </tr>
             </tbody>
           </table>
-        </section>
+        </article>
 
         {/* JWTによる認証の一例 */}
-        <section>
-            <h2>【JWTによる認証の一例】</h2>
-            <h3>〜ログイン以前〜</h3>
-            <ol>
-                <li>フロントエンドからユーザー情報(ID、パスワード等)をリクエスト</li>
-                <li>バックエンドで受け取ったIDとパスワードの検証</li>
-                <li>OKなら、秘密鍵でJWT発行(※認証されたユーザー情報と有効期限を含める)</li>
-                <li>発行したJWTをHTTPレスポンスヘッダーのCookieに詰めてフロントエンドに返す</li>
-                <li>フロントエンドでbase64で変換し、LocalStorageに保存</li>
-                <li>ログインは完了</li>
-            </ol>
+        <article>
+          <H2TitleComponent h2Title="JWTによる認証の一例"></H2TitleComponent>
+          <H5TitleComponent h5Title="ログイン前"></H5TitleComponent>
+          <ol>
+            <li>
+              フロントエンドからユーザー情報(ID、パスワード等)をリクエスト
+            </li>
+            <li>バックエンドで受け取ったIDとパスワードの検証</li>
+            <li>
+              OKなら、秘密鍵でJWT発行(※認証されたユーザー情報と有効期限を含める)
+            </li>
+            <li>
+              発行したJWTをHTTPレスポンスヘッダーのCookieに詰めてフロントエンドに返す
+            </li>
+            <li>フロントエンドでbase64で変換し、LocalStorageに保存</li>
+            <li>ログインは完了</li>
+          </ol>
 
-            <h3>〜ログイン以降〜</h3>
-            <ol>
-                <li>フロントエンドでLocalStorageにトークンがあるか確認</li>
-                <p>・ある場合は、その有効期限を確認し、HTTPヘッダに入れてバックエンドにリクエスト</p>
-                <p>・ない場合は、ユーザーの種類によって適切なページへリダイレクト</p>
-                <p>・切れている場合は、バックエンドに問い合わせし、バックエンドでトークンを更新（リフレッシュ）して返す</p>
-                <li>バックエンドで秘密鍵を使って、受け取ったJWTが改ざんされていないかチェック</li>
-                <li>バックエンドでJWTの中身を確認して有効期限が切れていないかチェック</li>
-                <li>バックエンドでOKならそのまま処理を継続、必要に応じてフロントエンドにデータを返す</li>
-                <li>バックエンドでNGなら、認証エラーをフロントエンドにレスポンス</li>
-            </ol>
-        </section>
-      </div>
-    </div>
+          <H5TitleComponent h5Title="ログイン後"></H5TitleComponent>
+          <ol>
+            <li>フロントエンドでLocalStorageにトークンがあるか確認</li>
+            <p>
+              ・ある場合は、その有効期限を確認し、HTTPヘッダに入れてバックエンドにリクエスト
+            </p>
+            <p>
+              ・ない場合は、ユーザーの種類によって適切なページへリダイレクト
+            </p>
+            <p>
+              ・切れている場合は、バックエンドに問い合わせし、バックエンドでトークンを更新（リフレッシュ）して返す
+            </p>
+            <li>
+              バックエンドで秘密鍵を使って、受け取ったJWTが改ざんされていないかチェック
+            </li>
+            <li>
+              バックエンドでJWTの中身を確認して有効期限が切れていないかチェック
+            </li>
+            <li>
+              バックエンドでOKならそのまま処理を継続、必要に応じてフロントエンドにデータを返す
+            </li>
+            <li>
+              バックエンドでNGなら、認証エラーをフロントエンドにレスポンス
+            </li>
+          </ol>
+        </article>
+      </section>
+    </>
   );
 }
 export default Jwt;

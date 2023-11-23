@@ -2,37 +2,38 @@ import styles from "./app-router.module.scss";
 import Image from "next/image";
 import clientPic from "../../public/client-components.png";
 import serverPic from "../../public/server-components.png";
+import H2TitleComponent from "../components/title-component/h2title-component";
 
 function AppRouter() {
   return (
-    <div className={styles.div}>
-      <div>
-        <h1>app routerの特色とは</h1>
+    <>
+      <h1>app routerの特色とは</h1>
 
-        <p>
-          Next.js13の非常に重要な仕組みである「Server Components」と「Client
-          Components」について理解が必要
-        </p>
+      <p>
+        Next.js13の非常に重要な仕組みである「Server Components」と「Client
+        Components」について理解が必要
+      </p>
 
+      <section>
         {/* Client Componentsとは */}
-        <section>
-          <h2>【Client Componentsとは】</h2>
+        <article>
+          <H2TitleComponent h2Title="Client Componentsとは"></H2TitleComponent>
           <ul>
             <li>
               JavaScriptの実行、HTML、CSSの組み立てがクライアントサイド(ユーザ側)で行われるコンポーネントを指す
             </li>
           </ul>
-          <Image src={clientPic} alt="clientPic"></Image>
+          <Image src={clientPic} alt="clientPic" className={styles.pic}></Image>
           <p>Client Componentsでは上の画像のようにアプリケーションが動作する</p>
           <p>
             ※Client
             Componentsはユーザ側(ブラウザ)でJavaScriptの実行、HTML、CSSの組み立てが行われるため、サイトパフォーマンスはユーザのデバイスや環境に依存してしまう
           </p>
-        </section>
+        </article>
 
         {/* Server Componentsとは */}
-        <section>
-          <h2>【Server Componentsとは】</h2>
+        <article>
+          <H2TitleComponent h2Title="Server Componentsとは"></H2TitleComponent>
           <ul>
             <li>
               JavaScriptの実行、HTML、CSSの組み立てがサーバ上で行われるコンポーネントを指す
@@ -43,13 +44,13 @@ function AppRouter() {
               ユーザ環境に依存しないサイトパフォーマンスの最適化が実現可能に！
             </li>
           </ul>
-          <Image src={serverPic} alt="serverPic"></Image>
+          <Image src={serverPic} alt="serverPic" className={styles.pic}></Image>
           <p>Server Componentsでは上の画像のようにアプリケーションが動作する</p>
-        </section>
+        </article>
 
         {/* Server Components使うメリット */}
-        <section>
-          <h2>【Server Components使うメリット】</h2>
+        <article>
+          <H2TitleComponent h2Title="Server Components使うメリット"></H2TitleComponent>
           <ul>
             <li>パフォーマンスが高い</li>
             <li>Googleのクローラーが認識できる</li>
@@ -62,11 +63,11 @@ function AppRouter() {
           <p>
             ⇒Googleのクローラーはデータが入っていないHTMLをそのWebページのコンテンツとして認識するので、コンテンツが充実していないと判断し、検索結果で上位表示をしないようになってしまう
           </p>
-        </section>
+        </article>
 
         {/* Server Componentsの生成が実行されるタイミング */}
-        <section>
-          <h2>【Server Componentsの生成が実行されるタイミング】</h2>
+        <article>
+          <H2TitleComponent h2Title="Server Componentsの生成が実行されるタイミング"></H2TitleComponent>
           <ol>
             <li>ビルド時</li>
             <li>一定時間経過後</li>
@@ -90,12 +91,12 @@ function AppRouter() {
             <b>Dynamic Data Ferching</b>という
           </p>
           <p>
-            ※リクエスト時に生成したHTMLをユーザの画面上に表示することを<b>Dynamic
-            Rendering</b>という
+            ※リクエスト時に生成したHTMLをユーザの画面上に表示することを
+            <b>Dynamic Rendering</b>という
           </p>
-        </section>
-      </div>
-    </div>
+        </article>
+      </section>
+    </>
   );
 }
 export default AppRouter;

@@ -83,6 +83,16 @@ function Nav() {
           </li>
         </ul>
       </nav>
+
+      <nav className={styles.nav}>
+        <ul>
+          <li>
+            <Link href="../../ip-dns" className={styles.link}>
+              IPアドレスとDNSサーバー
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }
