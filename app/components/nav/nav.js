@@ -88,7 +88,7 @@ function Nav() {
         <ul>
           <li>
             <Link href="../../ip-dns" className={styles.link}>
-              IPアドレスとDNSサーバー
+              IPアドレス・DNS・ドメイン
             </Link>
           </li>
         </ul>
