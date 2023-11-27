@@ -65,7 +65,7 @@ function PromisePage() {
         </article>
       </section>
 
-      <Image src={bathPic} alt="bathPicture" className={styles.img} />
+      <Image src={bathPic} alt="bathPicture" id={styles.picture} />
     </>
   );
 }

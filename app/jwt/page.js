@@ -1,6 +1,9 @@
 import H2TitleComponent from "../components/title-component/h2title-component";
 import H5TitleComponent from "../components/title-component/h5title-component";
 import styles from "./jwt.module.scss";
+import Image from "next/image";
+import TokenPic from "../../public/Token.png";
+import TokenCreatePic from "../../public/token-create.png";
 
 function Jwt() {
   return (
@@ -47,6 +50,11 @@ function Jwt() {
               『署名』セクションは JWT の正当性を保証するための署名セクション
             </li>
           </ul>
+
+          <aside>
+            <H5TitleComponent h5Title="トークンとは"></H5TitleComponent>
+            <p>暗号化された文字列のことでログインや登録でよく使われる。</p>
+          </aside>
         </article>
 
         {/* ペイロードについて */}
@@ -104,6 +112,17 @@ function Jwt() {
         {/* JWTによる認証の一例 */}
         <article>
           <H2TitleComponent h2Title="JWTによる認証の一例"></H2TitleComponent>
+          <Image src={TokenPic} className={styles.tokenPic}></Image>
+          <p>
+            まずユーザーが登録(register)する、その時にサーバーがトークン(T)を発行しクライアントに返す。このトークンをクライアントはCookieに保存し次回ログイン(login)時にサーバーにログイン情報と共に送る。
+          </p>
+
+          <aside>
+            <H5TitleComponent h5Title="ユーザー登録の流れ"></H5TitleComponent>
+            <Image src={TokenCreatePic} className={styles.tokenPic}></Image>
+            <p>※バリデーションとはパスワードが〇〇字以上になっているか、メールアドレスは@が入ったちゃんとしたアドレスかなどチェックすること。</p>
+            <p>※クライアントに渡されたJWTはCookieに保存される。</p>
+          </aside>
           <H5TitleComponent h5Title="ログイン前"></H5TitleComponent>
           <ol>
             <li>
@@ -145,6 +164,22 @@ function Jwt() {
               バックエンドでNGなら、認証エラーをフロントエンドにレスポンス
             </li>
           </ol>
+        </article>
+
+        {/* 参考になるYoutube解説動画 */}
+        <article>
+          <H2TitleComponent h2Title="参考になるYoutube解説動画"></H2TitleComponent>
+          <iframe
+            width="100%"
+            height="500"
+            src="https://www.youtube.com/embed/9xxXKkwpRg4?si=LFjcEbzWqUn_aRmy"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <hr></hr>
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/IaCQqCIqZ6U?si=4SOzptaPPXLBijjb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </article>
       </section>
     </>

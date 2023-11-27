@@ -4,7 +4,8 @@
     }
 }
 
-.img{
+// 画像の大きさを全体のCSSで調整しているためIDで上書き
+#picture{
     width: 20vh;
     height: 30vh;
 }

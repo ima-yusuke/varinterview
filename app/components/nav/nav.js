@@ -78,7 +78,7 @@ function Nav() {
           </li>
           <li>
             <a href="https://spice-factory.co.jp/web/about-atmicdesign/" target="blank" className={styles.link}>
-            アトミックデザイン
+            アトミックデザイン(外部サイト)
             </a>
           </li>
         </ul>
@@ -90,6 +90,31 @@ function Nav() {
             <Link href="../../ip-dns" className={styles.link}>
               IPアドレス・DNS・ドメイン
             </Link>
+          </li>
+          <li>
+            <Link href="../../portnumber" className={styles.link}>
+              ポート番号
+            </Link>
+          </li>
+          <li>
+            <Link href="../../package-json" className={styles.link}>
+              package.json
+            </Link>
+          </li>
+          <li>
+            <a href="https://webst8.com/blog/css-display/" className={styles.link} target="blank" >
+              ブロック要素・インライン要素(外部サイト)
+            </a>
+          </li>
+          <li>
+            <a href="https://web-camp.io/magazine/archives/27339" className={styles.link} target="blank" >
+              padding・margin(外部サイト)
+            </a>
+          </li>
+          <li>
+            <a href="https://youtu.be/UjSmGlJF-z4?si=LgL2rLmVyjEIKnBs" className={styles.link} target="blank" >
+              position:relativeとabsolute(Youtube)
+            </a>
           </li>
         </ul>
       </nav>
