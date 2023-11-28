@@ -1,0 +1,40 @@
+// 記事の親sectionタグ("/"のページに使うscss)
+#section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap:wrap;
+  column-gap: 5vh;
+  row-gap: 2vh;
+  background-color: rgb(209,209,209);
+  padding-top: 2%;
+  padding-left: 4.5%;
+  padding-right: 4.5%;
+
+  // 一つ一つの記事
+  article{
+    width: 50vh;
+    background-color: rgb(32,32,32);
+    padding: 3%;
+    border-radius: 2%;
+
+    aside{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    // タイトル
+    p{
+      color: white;
+    }
+  }:hover{
+    cursor: pointer;
+  }
+
+  img{
+    width: 50vh;
+    height: 30vh;
+  }
+}
+
+
