@@ -51,11 +51,11 @@ export default function Home() {
   return (
     <>
       <section id={styles.section}>
-        {articleGallery.map((value) => {
+        {articleGallery.map((value,key) => {
           return (
             <Link href={value.url} target="blank">
               <article key={value.ID}>
-                <Image src={value.img} key={value.ID}></Image>
+                <Image src={value.img} alt="picture"></Image>
                 <aside>
                 <p className={styles.test}>{value.title}</p>
                 <p>ハート</p>
