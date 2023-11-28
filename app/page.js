@@ -55,7 +55,7 @@ export default function Home() {
           return (
             <Link href={value.url} target="blank">
               <article key={value.ID}>
-                <Image src={value.img}></Image>
+                <Image src={value.img} key={value.ID}></Image>
                 <aside>
                 <p className={styles.test}>{value.title}</p>
                 <p>ハート</p>
