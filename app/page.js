@@ -53,7 +53,7 @@ export default function Home() {
       <section id={styles.section}>
         {articleGallery.map((value,key) => {
           return (
-            <Link href={value.url} target="blank">
+            <Link href={value.url} target="blank" key={key}>
               <article key={value.ID}>
                 <Image src={value.img} alt="picture"></Image>
                 <aside>
