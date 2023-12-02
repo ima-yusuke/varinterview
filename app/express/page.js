@@ -2,6 +2,12 @@ import H2TitleComponent from "../components/title-component/h2title-component";
 import Image from "next/image";
 import styles from "./express.module.scss";
 import Middleware from "../../public/middleware.png";
+import ExpressGetPic1 from "../../public/expressGetPic1.png";
+import ExpressGetPic2 from "../../public/expressGetPic2.png";
+import ExpressGetPic3 from "../../public/expressGetPic3.png";
+import ExpressGetPic4 from "../../public/expressGetPic4.png";
+import ExpressGetPic5 from "../../public/expressGetPic5.png";
+import ExpressGetPic6 from "../../public/expressGetPic6.png";
 
 
 function Express() {
@@ -31,6 +37,30 @@ function Express() {
             <li>app.put()</li>
             <li>app.delete()</li>
           </ul>
+        </article>
+
+        {/* GET メソッド */}
+        <article>
+            <H2TitleComponent h2Title="GET メソッド"></H2TitleComponent>
+            <Image src={ExpressGetPic1} alt="expressPic" className={styles.expressPic}></Image>
+            <p>上記写真のようにタグをres.send( )に入れることも可能。</p>
+            <hr></hr>
+            <br></br>
+            <Image src={ExpressGetPic2} alt="expressPic" className={styles.expressPic}></Image>
+            <p>そしてブラウザにres.send( )の内容が表示される。</p>
+        </article>
+
+        {/* Router */}
+        <article>
+            <H2TitleComponent h2Title="Router"></H2TitleComponent>
+            <Image src={ExpressGetPic3} alt="expressPic" className={styles.expressPic}></Image>
+            <p>上記のように{`"/test"`}や{`"/test/login"`}など同じtestが増えていくと管理しにくい。</p>
+            <Image src={ExpressGetPic4} alt="expressPic" className={styles.expressPic}></Image>
+            <p>そこでroutesフォルダ、そしてその中にtest.jsファイルを作成する。<br></br>そこに貼り付け、appをrouterに変更する。</p>
+            <Image src={ExpressGetPic5} alt="expressPic" className={styles.expressPic}></Image>
+            <p>最後に元々のserver.jsにrequire(test.jsのパスを記載)して、app.useに共通であるパスの{`"/test"`}と共通以降はtestrouterを使用するのでtestrouterと記載したら完了。</p>
+            <Image src={ExpressGetPic6} alt="expressPic" className={styles.expressPic}></Image>
+            <p>今後はこのように増やしていき管理することが可能！</p>
         </article>
 
         {/* ミドルウェア */}
