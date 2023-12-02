@@ -1,0 +1,18 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    padding-top: 7%;
+    padding-bottom: 7%;
+
+    input{
+        padding: 5%;
+    }
+
+    aside{
+        padding-top: 7%;
+        padding-bottom: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+}

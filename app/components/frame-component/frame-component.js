@@ -9,7 +9,7 @@ const pathname = usePathname()
 
   console.log(pathname)
     return(
-        <div className={pathname=="/"?styles.homecss:styles.div}>
+        <div className={pathname=="/login"?styles.logincss:pathname=="/"?styles.homecss:styles.div}>
             <div>
                 {props}
             </div>

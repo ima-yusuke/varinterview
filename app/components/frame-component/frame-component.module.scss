@@ -53,6 +53,25 @@
     }
 }
 
-// .homecss{
-    
-// }
+.logincss{
+  background-color: rgb(247, 247, 247);
+  padding-left: 35%;
+  padding-right: 35%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  // 記事の中側の白い所
+  div {
+    padding-left:9%;
+    padding-right:9%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    background-color: white;
+  }
+
+  h1{
+    text-align: center;
+    padding-bottom: 3%;
+    color: rgb(123,123,123);
+  }
+}

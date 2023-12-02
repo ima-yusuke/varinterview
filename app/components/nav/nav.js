@@ -7,22 +7,22 @@ function Nav() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <Link href="../../promsie" className={styles.link}>
+            <Link href="/" className={styles.link}>
                 HOME
             </Link>
           </li>
           <li>
-            <Link href="../../session" className={styles.link}>
+            <Link href="../../login" className={styles.link}>
               ログイン
             </Link>
           </li>
           <li>
-            <Link href="../../nproblem" className={styles.link}>
+            <Link href="/" className={styles.link}>
               マイページ
             </Link>
           </li>
           <li>
-            <Link href="../../nproblem" className={styles.link}>
+            <Link href="/" className={styles.link}>
               お問い合わせ
             </Link>
           </li>

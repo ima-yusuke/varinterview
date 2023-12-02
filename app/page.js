@@ -22,6 +22,9 @@ import Pic18 from "../public/pic-18.jpg";
 import Pic19 from "../public/pic-19.jpg";
 import Pic20 from "../public/pic-20.jpg";
 import Pic21 from "../public/pic-21.jpg";
+import Pic22 from "../public/pic-22.jpg";
+import Pic23 from "../public/pic-23.jpg";
+import Pic24 from "../public/pic-24.jpg";
 
 export default function Home() {
   const articleGallery = [
@@ -45,7 +48,10 @@ export default function Home() {
     { ID: 18, img: Pic18, title: " npm・NPM" ,"url":"../../npm-NPM"},
     { ID: 19, img: Pic19, title: "ブロック要素・インライン要素(外部サイト)" ,"url":"https://webst8.com/blog/css-display/"},
     { ID: 20, img: Pic20, title: "padding・margin(外部サイト)" ,"url":"https://web-camp.io/magazine/archives/27339"},
-    { ID: 21, img: Pic21, title: " position:relativeとabsolute(Youtube)" ,"url":"https://youtu.be/UjSmGlJF-z4?si=LgL2rLmVyjEIKnBs"}
+    { ID: 21, img: Pic21, title: " position:relativeとabsolute(Youtube)" ,"url":"https://youtu.be/UjSmGlJF-z4?si=LgL2rLmVyjEIKnBs"},
+    { ID: 22, img: Pic22, title: "CORSとは" ,"url":"../../cors"},
+    { ID: 23, img: Pic23, title: "Expressとは" ,"url":"../../express"},
+    { ID: 24, img: Pic24, title: "インスタンス化とは" ,"url":"../../instantiation"}
   ];
 
   return (
@@ -53,7 +59,7 @@ export default function Home() {
       <section id={styles.section}>
         {articleGallery.map((value,key) => {
           return (
-            <Link href={value.url} target="blank" key={key}>
+            <Link href={value.url}  key={key}>
               <article key={value.ID}>
                 <Image src={value.img} alt="picture"></Image>
                 <aside>
