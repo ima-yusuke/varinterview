@@ -37,7 +37,7 @@ function Cors(){
                 {/* エラーの原因 */}
                 <article>
                     <H2TitleComponent h2Title="エラーの原因"></H2TitleComponent>
-                    <p>Access to XMLHttpRequest at 'http://localhost:3065/user' from origin 'http://localhost:3000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.</p>
+                    <p>Access to XMLHttpRequest at \'http://localhost:3065/user\' from origin \'http://localhost:3000\' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No \'Access-Control-Allow-Origin\' header is present on the requested resource.</p>
                     <p>上記のようなエラーの原因を解説します。内容は<b>「http://localhost:3000からhttp://localhost:3065/userへ送ったアクセスがCORSポリシーによってブロックされた」</b>と書いてある。</p>
                     <Image src={CorsErrorPic} alt="CorsErrorPic"></Image>
                     <p><b>ポート番号が違う</b></p>
@@ -49,7 +49,7 @@ function Cors(){
                     <H2TitleComponent h2Title="エラーの解決方法"></H2TitleComponent>
                     <p>どうすればいいかはエラーメッセージが親切に教えてくれる</p>
                     <ul>
-                        <li>No 'Access-Control-Allow-Origin' header is present on the requested resource</li>
+                        <li>No \'Access-Control-Allow-Origin\' header is present on the requested resource</li>
                     </ul>
                     <Image src={CorsSolvePic} className={styles.pic} alt="CorsSolvePic"></Image>
                     <p>Access-Control-Allow-Originヘッダーがないと怒ってるので、それを入れれば良い。こうするとhttp://localhost:3000からのアクセスは許可するという意味になる。
