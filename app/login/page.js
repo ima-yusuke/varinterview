@@ -5,19 +5,20 @@ import axios from "axios";
 
 function Login(){
 
-    const [formValues,setFormValues] = useState({email:"",pass:""})
+    // Inputに入力した値を保存する場所
+    const [formValues,setFormValues] = useState();
 
-   
-
-    const loginmethod=(e)=>{
-        e.preventDefault();
-        // const formData = new FormData(e.target);
-        axios.post("http://localhost:8080/login",{"pass":"testtest"})
-    }
-
+    // Inputで入力される度に呼び出され値を更新し保存する
     const handleChange =(e)=>{
         const {name,value} = e.target; 
         setFormValues({...formValues,[name]:value})
+    }
+
+    // バックエンドにInputで入力した値を送信
+    // ※文字としてしか送信できないためJSON.stringifyで文字に変換し送信
+    const loginmethod=(e)=>{
+        e.preventDefault();
+        axios.post("http://localhost:8080/login",JSON.stringify(formValues))
     }
 
 
