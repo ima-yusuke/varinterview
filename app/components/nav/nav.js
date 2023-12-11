@@ -17,7 +17,7 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link href="/" className={styles.link}>
+            <Link href="../../mypage" className={styles.link}>
               マイページ
             </Link>
           </li>

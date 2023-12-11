@@ -2,6 +2,8 @@
 import { useState } from "react";
 import styles from "./login.module.scss";
 import axios from "axios";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function Login(){
 
@@ -14,11 +16,21 @@ function Login(){
         setFormValues({...formValues,[name]:value})
     }
 
+    const router = useRouter();
     // バックエンドにInputで入力した値を送信
-    // ※文字としてしか送信できないためJSON.stringifyで文字に変換し送信
     const loginmethod=(e)=>{
         e.preventDefault();
-        axios.post("http://localhost:8080/login",JSON.stringify(formValues))
+        axios.post("http://localhost:8080/login",formValues)
+        .then(response=>{
+            if(response.data.length>0){
+                let loginUser = response.data[0];
+                sessionStorage.setItem("loginUser",JSON.stringify(loginUser))
+                router.push("/mypage")
+            };
+        })
+        .catch((error) => {
+            console.log(error.response);
+          });
     }
 
 
@@ -31,7 +43,7 @@ function Login(){
                 <input placeholder="Password" type="password" name="pass" required="required" onChange={(e)=>handleChange(e)}></input>
 
                 <aside>
-                    <a>登録</a>
+                    <Link href="../register">新規登録</Link>
                     <button type="submit">ログイン</button>
                 </aside>
             </form>        

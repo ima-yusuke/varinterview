@@ -11,6 +11,7 @@ import ExpressGetPic6 from "../../public/expressGetPic6.png";
 import ExpressPostPic1 from "../../public/expressPostPic1.png";
 import ExpressPostPic2 from "../../public/expressPostPic2.png";
 import ExpressPostPic3 from "../../public/expressPostPic3.png";
+import ExpressPostPic4 from "../../public/expressPostPic4.png";
 import H5TitleComponent from "../components/title-component/h5title-component";
 
 function Express() {
@@ -68,10 +69,16 @@ function Express() {
           <aside>
             <H5TitleComponent h5Title="サーバーサイド"></H5TitleComponent>
             <Image
+            src={ExpressPostPic4}
+            alt="expressPic"
+            className={styles.expressPic}
+          ></Image>
+            <Image
             src={ExpressPostPic3}
             alt="expressPic"
             className={styles.expressPic}
           ></Image>
+          <p>※2枚目のres.setHeaderは1枚目で記載あり重複しているので削除してOK</p>
           </aside>
 
           <aside>
@@ -86,6 +93,7 @@ function Express() {
             alt="expressPic"
             className={styles.expressPic}
           ></Image>
+          <p>※2枚目JSON.stringifyしなくてOK。この場合そのままformValuesをAxiosの第二引数に書く</p>
           </aside>
         </article>
 

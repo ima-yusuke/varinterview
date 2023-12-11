@@ -25,6 +25,7 @@ import Pic21 from "../public/pic-21.jpg";
 import Pic22 from "../public/pic-22.jpg";
 import Pic23 from "../public/pic-23.jpg";
 import Pic24 from "../public/pic-24.jpg";
+import Pic25 from "../public/pic-25.jpg";
 
 export default function Home() {
   const articleGallery = [
@@ -51,7 +52,8 @@ export default function Home() {
     { ID: 21, img: Pic21, title: " position:relativeとabsolute(Youtube)" ,"url":"https://youtu.be/UjSmGlJF-z4?si=LgL2rLmVyjEIKnBs"},
     { ID: 22, img: Pic22, title: "CORSとは" ,"url":"../../cors"},
     { ID: 23, img: Pic23, title: "Expressとは" ,"url":"../../express"},
-    { ID: 24, img: Pic24, title: "インスタンス化とは" ,"url":"../../instantiation"}
+    { ID: 24, img: Pic24, title: "インスタンス化とは" ,"url":"../../instantiation"},
+    { ID: 25, img: Pic25, title: "データベース繋ぎ方" ,"url":"../../db"}
   ];
 
   return (
