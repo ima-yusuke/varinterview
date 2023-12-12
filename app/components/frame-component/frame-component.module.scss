@@ -1,77 +1,80 @@
 // 全てに共通するcssはここに書く
-.div {
-
-    // 記事の外側の余白
+@media screen and (min-width: 200px) {
+  .div {
     background-color: rgb(247, 247, 247);
-    padding-left: 12%;
-    padding-right: 12%;
+    // 記事の一番上のタイトル
+    h1 {
+      text-align: center;
+      padding-bottom: 3%;
+      color: rgb(123, 123, 123);
+    }
+
+    // 記事のarticleを囲ってる親
+    section {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5vh;
+    }
+
+
+    ul {
+      background-color: rgb(248, 249, 254);
+      border: 1px dotted rgb(72, 101, 178);
+      display: flex;
+      flex-direction: column;
+      row-gap: 2vh;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-right: 2%;
+      width: 95%;
+    }
+
+    img {
+      width: 100%;
+    }
+  
+    // 文字列で強調したいところ
+    b {
+      color: red;
+    }
+  }
+
+  
+
+  .logincss {
+    background-color: rgb(247, 247, 247);
+    padding-left: 35%;
+    padding-right: 35%;
     padding-top: 5%;
     padding-bottom: 5%;
   
     // 記事の中側の白い所
     div {
-      padding-left:9%;
-      padding-right:9%;
+      padding-left: 9%;
+      padding-right: 9%;
       padding-top: 8%;
       padding-bottom: 8%;
       background-color: white;
     }
   
-    // 記事の一番上のタイトル
-    h1{
+    h1 {
       text-align: center;
       padding-bottom: 3%;
-      color: rgb(123,123,123);
+      color: rgb(123, 123, 123);
     }
-
-    // 記事のarticleを囲ってる親
-    section{
-        display: flex;
-        flex-direction: column;
-        row-gap: 5vh;
-    }
-
-    ul {
-        background-color: rgb(248, 249, 254);
-        border: 1px dotted rgb(72, 101, 178);
-        display: flex;
-        flex-direction: column;
-        row-gap: 2vh;
-        padding-top: 2%;
-        padding-bottom: 2%;
-        padding-right: 2%;
-        width: 95%;
-      }
-
-    img{
-        width: 100%;
-    }
-
-    // 文字列で強調したいところ
-    b{
-        color: red;
-    }
-}
-
-.logincss{
-  background-color: rgb(247, 247, 247);
-  padding-left: 35%;
-  padding-right: 35%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-
-  // 記事の中側の白い所
-  div {
-    padding-left:9%;
-    padding-right:9%;
-    padding-top: 8%;
-    padding-bottom: 8%;
-    background-color: white;
   }
-
-  h1{
-    text-align: center;
-    padding-bottom: 3%;
-    color: rgb(123,123,123);
+  
+}
+@media (min-width: 600px) {
+}
+@media (min-width: 1000px) {
+  .div {
+    // 記事の外側の余白
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 }
+
+
