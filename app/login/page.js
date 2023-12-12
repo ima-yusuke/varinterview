@@ -4,6 +4,7 @@ import styles from "./login.module.scss";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Swal from 'sweetalert2';
 
 function Login(){
 
@@ -24,8 +25,16 @@ function Login(){
         .then(response=>{
             if(response.data.length>0){
                 let loginUser = response.data[0];
+                // loginUserというキーでログインユーザー情報をsessionstorageに保存
                 sessionStorage.setItem("loginUser",JSON.stringify(loginUser))
                 router.push("/mypage")
+            }else{
+                Swal.fire({
+                    icon: "error",
+                    title: "ログイン失敗",
+                    text: "メールアドレスもしくはパスワードが間違っています",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                  });
             };
         })
         .catch((error) => {
