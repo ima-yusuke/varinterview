@@ -26,6 +26,7 @@ import Pic22 from "../public/pic-22.jpg";
 import Pic23 from "../public/pic-23.jpg";
 import Pic24 from "../public/pic-24.jpg";
 import Pic25 from "../public/pic-25.jpg";
+import Pic26 from "../public/pic-26.jpg";
 
 export default function Home() {
   const articleGallery = [
@@ -53,7 +54,8 @@ export default function Home() {
     { ID: 22, img: Pic22, title: "CORSとは" ,"url":"../../cors"},
     { ID: 23, img: Pic23, title: "Expressとは" ,"url":"../../express"},
     { ID: 24, img: Pic24, title: "インスタンス化とは" ,"url":"../../instantiation"},
-    { ID: 25, img: Pic25, title: "データベース繋ぎ方" ,"url":"../../db"}
+    { ID: 25, img: Pic25, title: "データベース繋ぎ方" ,"url":"../../db"},
+    { ID: 26, img: Pic26, title: "ハッシュ方法" ,"url":"../../hash"}
   ];
 
   return (
