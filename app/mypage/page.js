@@ -20,11 +20,14 @@ function Mypage() {
     sessionStorage.removeItem("loginUser");
     router.push("/login");
   };
-
+ 
   return (
     <>
-      <h1>{loginUser != null ? `${loginUser.fname} ${loginUser.lname} 様のページ`  : null}</h1>
-
+      <h1>
+        {loginUser != null
+          ? `${loginUser.fname} ${loginUser.lname} 様のページ`
+          : null}
+      </h1>
       <button onClick={logOut}>ログアウト</button>
     </>
   );

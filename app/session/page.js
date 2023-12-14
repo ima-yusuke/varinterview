@@ -41,6 +41,7 @@ function SessionCookiePage() {
         {/* CookieとSessionが必要な理由 */}
         <article className={styles.reason}>
           <H2TitleComponent h2Title="なぜCookieやSessionといった技術が必要か?"></H2TitleComponent>
+          <Image src={httpPic} className={styles.img}></Image>
           <ul>
             <li>
               HTTPが<span>「Stateless(ステートレス)」</span>
@@ -53,7 +54,6 @@ function SessionCookiePage() {
               <span>「サーバーがクライアントの情報を保持し続けられない」</span>
               ことを意味している
             </li>
-            <Image src={httpPic} className={styles.img}></Image>
             <li>
               HTTP通信では以前の状態を保持することができず、サーバー側が
               <span>
