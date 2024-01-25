@@ -28,6 +28,10 @@ import Pic24 from "../public/pic-24.jpg";
 import Pic25 from "../public/pic-25.jpg";
 import Pic26 from "../public/pic-26.jpg";
 import Pic27 from "../public/pic-27.jpg";
+import Pic28 from "../public/pic-28.jpg";
+import Pic29 from "../public/pic-29.jpg";
+import Pic30 from "../public/pic-30.jpg";
+import Pic31 from "../public/pic-31.jpg";
 
 export default function Home() {
   const articleGallery = [
@@ -57,7 +61,11 @@ export default function Home() {
     { ID: 24, img: Pic24, title: "インスタンス化とは" ,"url":"../../instantiation"},
     { ID: 25, img: Pic25, title: "データベース繋ぎ方" ,"url":"../../db"},
     { ID: 26, img: Pic26, title: "ハッシュ方法" ,"url":"../../hash"},
-    { ID: 27, img: Pic27, title: "Git" ,"url":"../../git"}
+    { ID: 27, img: Pic27, title: "Git" ,"url":"../../git"},
+    { ID: 28, img: Pic28, title: "Laravel" ,"url":"../../laravel"},
+    { ID: 29, img: Pic29, title: "Laravel&Docker" ,"url":"../../laravel2"},
+    { ID: 30, img: Pic30, title: "SQL" ,"url":"../../sql"},
+    { ID: 31, img: Pic31, title: "ER図" ,"url":"../../er"}
   ];
 
   return (

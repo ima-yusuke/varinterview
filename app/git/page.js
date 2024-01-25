@@ -18,6 +18,25 @@ import GitPic13 from "../../public/gitPic13.png";
 import GitPic14 from "../../public/gitPic14.png";
 import GitPic15 from "../../public/gitPic15.png";
 import GitPic16 from "../../public/gitPic16.png";
+import GitPic17 from "../../public/gitPic17.png";
+import GitPic18 from "../../public/gitPic18.png";
+import GitPic19 from "../../public/gitPic19.png";
+import GitPic20 from "../../public/gitPic20.png";
+import GitPic21 from "../../public/gitPic21.png";
+import GitPic22 from "../../public/gitPic22.png";
+import GitPic23 from "../../public/gitPic23.png";
+import GitPic24 from "../../public/gitPic24.png";
+import GitPic25 from "../../public/gitPic25.png";
+import GitPic26 from "../../public/gitPic26.png";
+import GitPic27 from "../../public/gitPic27.png";
+import GitPic28 from "../../public/gitPic28.png";
+import GitPic29 from "../../public/gitPic29.png";
+import GitPic30 from "../../public/gitPic30.png";
+import GitPic31 from "../../public/gitPic31.png";
+import GitPic32 from "../../public/gitPic32.png";
+import GitPic33 from "../../public/gitPic33.png";
+import GitPic34 from "../../public/gitPic34.png";
+import GitPic35 from "../../public/gitPic35.png";
 
 function Git() {
   return (
@@ -69,6 +88,103 @@ function Git() {
           </ul>
         </article>
 
+        {/* GitHubへの公開鍵認証(SSH接続)について */}
+        <article>
+          <H2TitleComponent h2Title="GitHubへの公開鍵認証(SSH接続)について"></H2TitleComponent>
+          <p>
+            公開鍵認証とは、リモートのコンピューターとローカルのコンピューターを安全に接続する方法。
+            <b>『秘密鍵』と『公開鍵』</b>
+            を用いて、接続を行いう。イメージとしては、公開鍵が南京錠のようなもので、秘密鍵がその南京錠のカギのようなもの。
+          </p>
+          <p>
+            今回の例では、公開鍵をGitHubのアカウントに渡す。そうすると、GitHub側では公開鍵(南京錠)を用いて接続をロックし、その南京錠の鍵である秘密鍵を持つ人だけの接続を許可するようになる。
+          </p>
+          <Image src={GitPic26} alt="gitpic" className={styles.bigPic}></Image>
+          <p>
+            左のGitHubのサーバー上に公開鍵がある場合、その公開鍵を開ける秘密鍵をもっているのは上の笑顔の人だけであるため、笑顔の人はログインできるが、下の明らかに悪人顔の人はログインできない。このようにして、セキュリティを高めている。
+          </p>
+
+          <aside>
+            <H5TitleComponent h5Title="SSHとは"></H5TitleComponent>
+            <p>
+              Secure Shell(セキュアシェル)の略称で、リモートコンピュータと通信するためのプロトコル。
+              認証部分を含めネットワーク上の通信がすべて暗号化されるため、安全に通信することができる。
+            </p>
+          <Image src={GitPic34} alt="gitpic" className={styles.squarePic}></Image>
+          <p>通信する内容を暗号化して送るのがSSH。</p>
+          <Image src={GitPic35} alt="gitpic" className={styles.highPic}></Image>
+          <p>※telnetは『他のコンピュータを遠隔操作するための仕組み』で、やり取りする情報は、暗号化しないで、そのまま送る。(パスワードのような大事な情報もそのままなので途中で盗み見られたら大変)。SSHが普及する以前は、telnetが接続方法として使われいたがデータは暗号化されないため、比較的簡単に情報を盗み見できてしまいセキュリティに問題があるとして、SSHを使用する企業が増えている。</p>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="GitHubへの公開鍵認証のやり方"></H5TitleComponent>
+            <p>
+              ①『cd ~/.ssh』でフォルダ移動。~/.ssh
+              はホーム直下のsshファイルの保存場所を表している。別の場所で秘密鍵を生成すると、「こんな安全じゃない場所の秘密鍵なんて使いたくない」というエラーが発生する場合がある。
+            </p>
+            <Image
+              src={GitPic27}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+            <p>
+              ②『ssh-keygen -t
+              rsa』で鍵を生成。※質問が3つほどあるがそのまま全てenterでOK。
+            </p>
+            <Image
+              src={GitPic28}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+            <p>
+              ③『cat
+              /Users/yusuke/.ssh/id_rsa.pub』で公開鍵の中身を取得し、コピーする。
+            </p>
+            <Image
+              src={GitPic29}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+            <p>
+              ④
+              <a href="https://github.com/settings/ssh" target="blank">
+                ここ
+              </a>
+              からgithubへ行き『New SSH key』をクリック。
+            </p>
+            <Image
+              src={GitPic30}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+            <p>
+              ⑤『Title』に公開鍵の名前(なんでもOK)、『key type』はAuthentication
+              Key、『key』に③でコピーしたものを貼り付ける。
+            </p>
+            <Image
+              src={GitPic31}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+            <p>⑥完了</p>
+            <Image
+              src={GitPic32}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+            <p>
+              ⑦『ssh -T
+              git@github.com』で接続が上手くいっているのか確認。下記のように表示されればOK。
+            </p>
+            <Image
+              src={GitPic33}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+          </aside>
+        </article>
+
+        {/* ブランチについて */}
         <article>
           <H2TitleComponent h2Title="ブランチについて"></H2TitleComponent>
           <p>ブランチにはリポジトリと同じようにいくつか種類がある。</p>
@@ -270,36 +386,205 @@ function Git() {
 
             <p>【引数なしのgit fetch】</p>
             <ul>
-                <li>実行したブランチに上流ブランチが設定してある場合は、上流ブランチの最新のコミット履歴を取得してくる</li>
-                <li>上流ブランチが設定されておらず、リモートレポジトリ名に「origin」が登録されている場合は、「origin」というリモートレポジトリのすべてのブランチの最新のコミットをまるごと取得してくる。</li>
+              <li>
+                実行したブランチに上流ブランチが設定してある場合は、上流ブランチの最新のコミット履歴を取得してくる
+              </li>
+              <li>
+                上流ブランチが設定されておらず、リモートレポジトリ名に「origin」が登録されている場合は、「origin」というリモートレポジトリのすべてのブランチの最新のコミットをまるごと取得してくる。
+              </li>
             </ul>
             <p>【git fetchで上流ブランチを設定する方法】</p>
             <ul>
-                <li>git fetchで上流ブランチを設定するには、通常のgit fetch {`<リモートレポジトリ名>`} {`<リモートのブランチ名>`}に「--set-upstream」オプションを付けて実行する。(upstreamは上流という意味)</li>
-                <li>git fetch --set-upstream {`<リモートレポジトリ名> <リモートのブランチ名>`}</li>
+              <li>
+                git fetchで上流ブランチを設定するには、通常のgit fetch{" "}
+                {`<リモートレポジトリ名>`} {`<リモートのブランチ名>`}
+                に「--set-upstream」オプションを付けて実行する。(upstreamは上流という意味)
+              </li>
+              <li>
+                git fetch --set-upstream{" "}
+                {`<リモートレポジトリ名> <リモートのブランチ名>`}
+              </li>
             </ul>
             <p>【リモートレポジトリ名を指定したgit fetch】</p>
             <ul>
-                <li>リモートレポジトリが複数登録してある場合など、対象のリモートレポジトリを指定してgit fetchすることもできる。その場合は第2引数でリモートレポジトリ名を指定する。</li>
-                <li>git fetch {`<リモートレポジトリ名>`}</li>
+              <li>
+                リモートレポジトリが複数登録してある場合など、対象のリモートレポジトリを指定してgit
+                fetchすることもできる。その場合は第2引数でリモートレポジトリ名を指定する。
+              </li>
+              <li>git fetch {`<リモートレポジトリ名>`}</li>
             </ul>
           </aside>
 
           <aside>
             <H5TitleComponent h5Title="pullとは"></H5TitleComponent>
-            <p>git cloneやgit fetchはローカルレポジトリのどのブランチでコマンドを実行するかは関係ないが、git pullはgit fetchしてgit mergeまで行うので<b>どこのブランチで実行するかが大きく関係してくる。</b></p>
-            <p>git pullを実行する前に、自分がどのブランチにいるかを確認し、マージしたいブランチにいるかを確認しておくことが重要。</p>
-            <p>git cloneやgit fetchのようにただ情報をとってくるだけではなく、マージまで行うので、コンフリクトが発生することがある。</p>
+            <p>
+              git cloneやgit
+              fetchはローカルレポジトリのどのブランチでコマンドを実行するかは関係ないが、git
+              pullはgit fetchしてgit mergeまで行うので
+              <b>どこのブランチで実行するかが大きく関係してくる。</b>
+            </p>
+            <p>
+              git
+              pullを実行する前に、自分がどのブランチにいるかを確認し、マージしたいブランチにいるかを確認しておくことが重要。
+            </p>
+            <p>
+              git cloneやgit
+              fetchのようにただ情報をとってくるだけではなく、マージまで行うので、コンフリクトが発生することがある。
+            </p>
             <ul>
-                <li>git pull {`<リモートレポジトリ名> <リモートのブランチ名>`}</li>
+              <li>
+                git pull {`<リモートレポジトリ名> <リモートのブランチ名>`}
+              </li>
             </ul>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="プルリクエストとは"></H5TitleComponent>
+            <p>GitHubで利用出来るプルリクエストの機能としては大きく3つある。</p>
+            <ul>
+                <li>①他の開発者への変更通知</li>
+                <li>②変更箇所の比較表示</li>
+                <li>③コメント機能</li>
+            </ul>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="mergeとは"></H5TitleComponent>
+            <p>
+              git mergeは元のブランチと<b>トピックブランチ(分岐したブランチ)</b>
+              を統合した新しいコミットを作成する。
+              <b>(git merge後に生成されるコミットは1つのみ)</b>
+            </p>
+            <Image
+              src={GitPic17}
+              alt="gitpic"
+              className={styles.mediumPic}
+            ></Image>
+            <p>
+              iss53ブランチのコミットをmasterブランチにマージすると以下のようになる。
+            </p>
+            <Image
+              src={GitPic18}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+            <p>
+              例えば、testブランチでaaブランチの内容を取り込みたい場合は次のようにする。
+            </p>
+            <Image
+              src={GitPic19}
+              alt="gitpic"
+              className={styles.mediumPic}
+            ></Image>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="conflict対処法"></H5TitleComponent>
+            <ul>
+              <li>①コンフリクトが発生しているファイルの内容を修正する</li>
+              <li>
+                ②git add {`<ファイル名>`}で対象の①ファイルをステージングする
+              </li>
+              <li>
+                ③git commit {`<ファイル名>`}
+                で対象のファイルをコミットするとmerge出来ている
+              </li>
+            </ul>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="git rebaseとは"></H5TitleComponent>
+            <ul>
+              <li>
+                コミット履歴を移動したり修正、削除したりするコマンド(マージ前にコミット履歴をきれいにする目的で使用するのが一般的)
+              </li>
+            </ul>
+            <p>下記のようにC3,C4,C10が枝分かれしておりrebaseしようとする。</p>
+            <Image
+              src={GitPic20}
+              alt="gitpic"
+              className={styles.mediumPic}
+            ></Image>
+            <p>
+              するとseverブランチに取り込まれる<b>(ここがmergeと異なる)</b>。
+            </p>
+            <Image
+              src={GitPic21}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="リモートレポジトリURLの変更・上書き方法"></H5TitleComponent>
+            <ul>
+              <li>登録したURLのみを変更するには、set-urlを使う</li>
+              <li>git remote set-url {`<リモートレポジトリ名> <新しいURL>`}</li>
+            </ul>
+            <Image
+              src={GitPic22}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="リモートレポジトリの名前を変更・上書きする方法(originを変える)"></H5TitleComponent>
+            <ul>
+              <li>
+                リモートレポジトリの名前、いわゆるorigin、を変更・上書きするには、remote
+                renameを使う
+              </li>
+              <li>
+                git remote rename{" "}
+                {`<変更前のレポジトリ名> <変更後のレポジトリ名>`}
+              </li>
+            </ul>
+            <Image
+              src={GitPic23}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="リモートレポジトリを削除する方法"></H5TitleComponent>
+            <ul>
+              <li>登録したリモートレポジトリを削除するには、rmを使う</li>
+              <li>git remote rm {`<リモートレポジトリ名>`}</li>
+            </ul>
+            <Image
+              src={GitPic24}
+              alt="gitpic"
+              className={styles.mediumPic}
+            ></Image>
+          </aside>
+
+          <aside>
+            <H5TitleComponent h5Title="リモートレポジトリを複数登録する方法"></H5TitleComponent>
+            <ul>
+              <li>
+                リモートレポジトリを複数登録できる。これをすると、ブランチの内容をそれぞれのリモートレポジトリに送ることもできる
+              </li>
+              <li>git remote add {`<リモートレポジトリ名> <URL>`}</li>
+            </ul>
+            <Image
+              src={GitPic25}
+              alt="gitpic"
+              className={styles.bigPic}
+            ></Image>
           </aside>
         </article>
 
         {/* 参考記事 */}
         <article>
           <H2TitleComponent h2Title="参考記事"></H2TitleComponent>
-          <a href="https://prograshi.com/general/git/difference-of-git-clone-fetch-pull/" target="blank">こちら</a>
+          <a
+            href="https://prograshi.com/general/git/difference-of-git-clone-fetch-pull/"
+            target="blank"
+          >
+            こちら
+          </a>
         </article>
       </section>
     </>
