@@ -112,14 +112,14 @@ function Jwt() {
         {/* JWTによる認証の一例 */}
         <article>
           <H2TitleComponent h2Title="JWTによる認証の一例"></H2TitleComponent>
-          <Image src={TokenPic} className={styles.tokenPic}></Image>
+          <Image src={TokenPic} className={styles.tokenPic} alt="jwt"></Image>
           <p>
             まずユーザーが登録(register)する、その時にサーバーがトークン(T)を発行しクライアントに返す。このトークンをクライアントはCookieに保存し次回ログイン(login)時にサーバーにログイン情報と共に送る。
           </p>
 
           <aside>
             <H5TitleComponent h5Title="ユーザー登録の流れ"></H5TitleComponent>
-            <Image src={TokenCreatePic} className={styles.tokenPic}></Image>
+            <Image src={TokenCreatePic} className={styles.tokenPic} alt="jwt"></Image>
             <p>※バリデーションとはパスワードが〇〇字以上になっているか、メールアドレスは@が入ったちゃんとしたアドレスかなどチェックすること。</p>
             <p>※クライアントに渡されたJWTはCookieに保存される。</p>
           </aside>

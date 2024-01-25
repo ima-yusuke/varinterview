@@ -16,7 +16,7 @@ function IpDns() {
         {/* IPアドレスとは */}
         <article>
           <H2TitleComponent h2Title="IPアドレスとは"></H2TitleComponent>
-          <Image src={IpPic} className={styles.pic}></Image>
+          <Image src={IpPic} className={styles.pic} alt="ippic"></Image>
           <ul>
             <li>Internet Protocol Addressの略</li>
             <li>
@@ -118,7 +118,7 @@ function IpDns() {
          {/* ドメインとは */}
          <article>
             <H2TitleComponent h2Title="ドメインとは"></H2TitleComponent>
-            <Image src={DomainPic} className={styles.pic}></Image>
+            <Image src={DomainPic} className={styles.pic}  alt="ippic"></Image>
             <p>「ドメイン」とは、簡単に言えば「インターネット上の住所」。この住所はもちろんIPアドレスで示すこともできる。ただ、例えば「183.181.99.1」と数字で示されても覚えられないし、Webサイトを置くサーバーを変更したら、IPアドレスも変わってしまう。そこで、<b>より分かりやすく運用するために、IPアドレスを「wis-works.jp」といった文字列へと置き換えており、この文字列を、ドメインという。</b>
             </p>
             <p>ドメインのうち、「.」の右側文字列「com」「net」「jp」などは、<b>「トップレベルドメイン(TLD)」</b>という</p>
@@ -127,10 +127,10 @@ function IpDns() {
         {/* DNSとは */}
         <article>
             <H2TitleComponent h2Title="DNSとは"></H2TitleComponent>
-            <Image src={DnsPic} className={styles.pic}></Image>
+            <Image src={DnsPic} className={styles.pic} alt="ippic"></Image>
             <p>自社のWEBサイト用にドメインを取得したところで通信はIPアドレス同士で行うものなので、そのドメインが含まれるURLを叩いたところでどこにもアクセスは出来ない。そこで必要になるのがこの<b>ドメインに紐づくIPアドレスはこれだと紐づける設定をしておく作業である。その設定を登録しておくのがDNS(Domain Name System)。</b></p>
 
-            <Image src={DnsRolePic} className={styles.picSmall}></Image>
+            <Image src={DnsRolePic} className={styles.picSmall}  alt="ippic"></Image>
             <p>「http://www.sample.co.jp」と入れて、該当Webコンテンツを表示させる裏側で、実は皆さんのPCは、「文字ではどこか分からないから、IPアドレスで教えて」とDNSに依頼をかけている。
             </p>
             <p>と言っても、ある特定のDNSサーバーが、世界中のドメイン名とIPアドレスの対応情報(住所録)を全て管理しているなどといった、単純な仕組みではありません。「jpドメインの情報を保持するDNSサーバー」「co.jpドメインの情報を保持するDNSサーバー」……などと、情報はドメインの階層ごとに<b>独立・分散</b>しています。</p>

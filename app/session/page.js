@@ -41,7 +41,7 @@ function SessionCookiePage() {
         {/* CookieとSessionが必要な理由 */}
         <article className={styles.reason}>
           <H2TitleComponent h2Title="なぜCookieやSessionといった技術が必要か?"></H2TitleComponent>
-          <Image src={httpPic} className={styles.img}></Image>
+          <Image src={httpPic} className={styles.img} alt="sessionPic"></Image>
           <ul>
             <li>
               HTTPが<span>「Stateless(ステートレス)」</span>
@@ -74,8 +74,8 @@ function SessionCookiePage() {
         <article className={styles.reason}>
           <H2TitleComponent h2Title="Session IDの流れ"></H2TitleComponent>
           <aside>
-            <Image src={cookiesession2Pic} className={styles.img}></Image>
-            <Image src={cookiesessionPic} className={styles.img}></Image>
+            <Image src={cookiesession2Pic} className={styles.img} alt="sessionPic"></Image>
+            <Image src={cookiesessionPic} className={styles.img} alt="sessionPic"></Image>
           </aside>
           <ol>
             <li>サーバーはアクセスしてきたユーザーにSession IDを付与する</li>

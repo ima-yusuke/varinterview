@@ -7,16 +7,16 @@ function TableComponent({tableTitle,theadData,tbodyData}){
             <table border="1">
                 <thead>
                     <tr>
-                       {theadData.map((value)=>{
-                        return <th>{value}</th>
+                       {theadData.map((value,key)=>{
+                        return <th key={key}>{value}</th>
                        })}
                     </tr>
                 </thead>
                 <tbody>
-                    {tbodyData.map((value)=>{
-                        return <tr>
-                            {value.map((val)=>{
-                               return <td>{val}</td>
+                    {tbodyData.map((value,key)=>{
+                        return <tr key={key}>
+                            {value.map((val,key)=>{
+                               return <td key={key}>{val}</td>
                             })}
                         </tr>
                     })}
